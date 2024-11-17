@@ -14,16 +14,15 @@ cluster = MongoClient("mongodb+srv://Aectivistyrn:Y9eBpH2SGN2TR19Z@cluster0.pkkw
 db = cluster["journaldata"]
 data = db["data"]
 logs = db["logs"]
-data = db["user"]
+userlogin = db["user"]
 
-TabFrame_UpperPanel = CTkFrame(window, width = 900, height = 60, corner_radius=0)
-TabFrame_Panel = CTkFrame(window, width =200, height=540, corner_radius=0)
+TabFrame_UpperPanel = CTkFrame(window, width = 900, height = 60, corner_radius=0, fg_color="#121212")
+TabFrame_Panel = CTkFrame(window, width =200, height=540, corner_radius=0, fg_color="#3052c9")
+TabContentScroll = CTkScrollableFrame(window, width = 700, height = 540, corner_radius=0, fg_color="#bebdff")
+
 TabFrame_UpperPanel.place(x=0, y=0)
 TabFrame_Panel.place(x=0, y = 60)
-
-
-
-
+TabContentScroll.place(x=200, y=60)
 
 
 window.mainloop()
